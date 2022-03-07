@@ -1,5 +1,5 @@
 {
     "files": [
-        {"filename": "file1.txt", "path": ["n", "ter", "uidsfudh"], "default": "" }
+        {"filename": "file1.txt", "path": ["textfolder1", "testfolder2"], "default": "This is the default..." }
     ]
 }

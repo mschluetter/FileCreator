@@ -23,10 +23,5 @@ class FileCreator:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(file["default"])
 
-def main() -> None:
-    creator = FileCreator("files.json")
-    creator.run()
-
-
 if __name__ == "__main__":
-    main()
+    print("Welcome to file creator. Please import the FileCreator class.")
