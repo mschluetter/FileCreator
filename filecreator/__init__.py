@@ -1,11 +1,11 @@
 import os
 import json
-from typing import List
+from typing import Dict, List
 
 class FileCreator:
-    data: List = None # List of Dicts to create the Files
+    data: List[Dict] = None # List of Dicts to create the Files
 
-    def __init__(self, json_path:str=None, data:List=None, 
+    def __init__(self, json_path:str=None, data:List[Dict]=None, 
             json_key:str=None, json_position:int=0) -> None:
         """ Provide json path here. If you have the data,
         set from_file=False, and attach data."""
@@ -18,11 +18,8 @@ class FileCreator:
             self.data = jdata[key]
 
         if data:
-            if self.data:
-                for entry in data:
-                    self.data.append(entry)
-            else:
-                self.data = data
+            self.data = self.data + data if self.data else data
+
             
     def run(self) -> None:
         """ run this method to execute """
